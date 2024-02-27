@@ -19,13 +19,13 @@ class CategorySeeder extends Seeder
             [
                 'name' => 'Celulares e tablets',
                 'slug' => Str::slug('Celulares e tablets'),
-                'icon' => '<i class="fa fa-mobile" aria-hidden="true"></i>'
+                'icon' => '<i class="fa-solid fa-mobile-screen"></i>'
             ],
 
             [
                 'name' => 'TV, áudio e vídeo',
                 'slug' => Str::slug('TV, áudio e vídeo'),
-                'icon' => '<i class="fa fa-television" aria-hidden="true"></i>'
+                'icon' => '<i class="fa-solid fa-tv"></i>'
             ],
 
             [
