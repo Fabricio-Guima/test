@@ -11,7 +11,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/fontawesome/css/all.min.css') }}">
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -41,6 +41,34 @@
     </div>
 
     @stack('modals')
+
+
+
+
+
+
+    <script>
+        function dropdown() {
+            return {
+                open: false,
+                show() {
+                    if (this.open) {
+                        this.open = false
+                        document.getElementsByTagName('html')[0].style.overflow = "auto"
+                    } else {
+                        this.open = true
+                        document.getElementsByTagName('html')[0].style.overflow = "hidden"
+
+                    }
+                },
+
+                close() {
+                    this.open = false
+                    document.getElementsByTagName('html')[0].style.overflow = "auto"
+                }
+            }
+        }
+    </script>
 
     @livewireScripts
 </body>
