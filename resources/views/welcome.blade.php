@@ -2,7 +2,7 @@
 
     <div class="container py-8">
         @foreach ($categories as $category)
-            <section>
+            <section class="mb-6">
                 <h1 class="text-lg uppercase font-semibold text-gray-700">
                     {{ $category->name }}
                 </h1>
@@ -30,10 +30,10 @@
                             slidesToShow: 4.5,
                             slidesToScroll: 4.5,
                             draggable: true,
-                            dots: '.dots',
+                            dots: '.glider-' + id + '~.dots',
                             arrows: {
-                                prev: '.glider-prev',
-                                next: '.glider-next'
+                                prev: '.glider-' + id + '~.glider-prev',
+                                next: '.glider-' + id + '~.glider-next'
                             }
                         });
                     }
