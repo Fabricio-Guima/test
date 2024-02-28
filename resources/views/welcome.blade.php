@@ -21,7 +21,7 @@
             document.addEventListener('glider', function(event) {
                 // pegando cada id do componente 'category-products' para o js do glider funcionar para instancia de componente
                 var id = event.detail.id
-                console.log('idd', id);
+
                 Livewire.hook('morph.added', (element) => {
 
                     var glider = new Glider(document.querySelector('.glider-' + id), {
