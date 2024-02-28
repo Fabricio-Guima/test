@@ -24,16 +24,19 @@
 
                 Livewire.hook('morph.added', (element) => {
 
-                    var glider = new Glider(document.querySelector('.glider-' + id), {
-                        slidesToShow: 4.5,
-                        slidesToScroll: 4.5,
-                        draggable: true,
-                        dots: '.dots',
-                        arrows: {
-                            prev: '.glider-prev',
-                            next: '.glider-next'
-                        }
-                    });
+                    var gliderElement = document.querySelector('.glider-' + id);
+                    if (gliderElement) {
+                        new Glider(gliderElement, {
+                            slidesToShow: 4.5,
+                            slidesToScroll: 4.5,
+                            draggable: true,
+                            dots: '.dots',
+                            arrows: {
+                                prev: '.glider-prev',
+                                next: '.glider-next'
+                            }
+                        });
+                    }
                 })
             })
         </script>
