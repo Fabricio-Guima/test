@@ -17,7 +17,7 @@ class CategoryFilter extends Component
     public $subcategoria;
     public $marca;
 
-    public $view = 'list';
+    public $view = 'grid';
 
     public function resetFilter()
     {
