@@ -32,4 +32,10 @@ class Category extends Model
         // alvo é Product, quero pega-los e quem tá no meio fica ali em último (subcategory)
         return $this->hasManyThrough(Product::class, Subcategory::class);
     }
+
+    //mesmo que passando o id da categoria na url, é o slug que irá aparecer magicamente
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
