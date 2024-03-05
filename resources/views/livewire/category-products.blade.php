@@ -5,21 +5,23 @@
             <ul class="glider-{{ $category->id }}">
                 @foreach ($products as $product)
                     <li class="bg-white rounded-lg shadow {{ $loop->last ? '' : 'sm:mr-4' }}">
-                        <article class="">
-                            <figure class="w-100">
-                                <img src="{{ Storage::url($product->images->first()->url) }}"
-                                    class="w-full h-48 object-cover object-center" alt="">
-                            </figure>
-                            <div class="py-4 px-6">
-                                <h1 class="text-lg font-semibold">
-                                    <a href="">
-                                        {{ Str::limit($product->name, 20) }}
-                                    </a>
-                                </h1>
+                        <a href="{{ route('products.show', $product) }}">
+                            <article class="">
+                                <figure class="w-100">
+                                    <img src="{{ Storage::url($product->images->first()->url) }}"
+                                        class="w-full h-48 object-cover object-center" alt="">
+                                </figure>
+                                <div class="py-4 px-6">
+                                    <h1 class="text-lg font-semibold">
+                                        <a href="{{ route('products.show', $product) }}">
+                                            {{ Str::limit($product->name, 20) }}
+                                        </a>
+                                    </h1>
 
-                                <p class="font-bold text-truegray-700">R$ {{ $product->price }}</p>
-                            </div>
-                        </article>
+                                    <p class="font-bold text-truegray-700">R$ {{ $product->price }}</p>
+                                </div>
+                            </article>
+                        </a>
                     </li>
                 @endforeach
             </ul>
