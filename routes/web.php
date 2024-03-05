@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [WelcomeController::class, 'getAllCategories']);
+
+Route::get('/categories/{category}', [CategoryController::class, 'show'])->name('categories.show');
 
 Route::middleware([
     'auth:sanctum',
