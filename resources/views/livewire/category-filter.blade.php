@@ -61,7 +61,7 @@
                                 </figure>
                                 <div class="py-4 px-6">
                                     <h1 class="text-lg font-semibold">
-                                        <a href="">
+                                        <a href="{{ route('products.show', $product) }}">
                                             {{ Str::limit($product->name, 20) }}
                                         </a>
                                     </h1>
@@ -116,9 +116,10 @@
                                     </div>
 
                                     <div class="mt-auto mb-6">
-                                        <x-button class="bg-red-500 hover:bg-red-400 w-full sm:w-40 text-center">
+                                        <x-button-go-to href="{{ route('products.show', $product) }}"
+                                            class="bg-red-500 hover:bg-red-400 w-full sm:w-40 text-center">
                                             Ver Produto
-                                        </x-button>
+                                        </x-button-go-to>
                                     </div>
                                 </div>
                             </article>
