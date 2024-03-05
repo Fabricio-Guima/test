@@ -48,4 +48,10 @@ class Product extends Model
     {
         return $this->morphMany(Image::class, 'imageable');
     }
+
+    //mesmo que passando o id da categoria na url, é o slug que irá aparecer magicamente
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
