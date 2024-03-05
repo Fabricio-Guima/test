@@ -20,3 +20,10 @@
 .rotate {
     animation: rotate 0.7s linear infinite;
 }
+
+/* produto em modo lista imagem */
+@media (max-width: 830px) {
+    .img-produto {
+        width: 100%;
+    }
+}
